@@ -1,0 +1,19 @@
+{
+  "name": "angular-interactive-form",
+  "version": "1.0.0",
+  "description": "An angularjs-multi-step-form-using-ui-router",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bovojon/angular-interactive-form.git"
+  },
+  "author": "scotch.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bovojon/angular-interactive-form/issues"
+  },
+  "homepage": "https://github.com/Bovojon/angular-interactive-form#readme"
+}
