@@ -1,14 +1,16 @@
 <!-- NAME -->
-<div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine && submitted }"> <!-- ng-class allows adding classes based on an expression -->
+<div id="name-group" class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine && submitted }"> <!-- ng-class allows adding classes based on an expression -->
     <label for="name">Name</label>
     <input type="text" name="name" class="form-control" ng-model="formData.name" required>
+    <span class="help-block"></span>
     <p ng-show="userForm.name.$invalid && !userForm.name.$pristine && submitted" class="help-block">You name is required.</p>
 </div>
 
 <!-- USERNAME -->
-<div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine && submitted }">
+<div id="username-group" class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine && submitted }">
     <label for="username">Username</label>
     <input type="text" name="username" class="form-control" ng-model="formData.username" ng-minlength="3" ng-maxlength="8">
+    <span class="help-block"></span>
     <p ng-show="userForm.username.$error.minlength && submitted" class="help-block">Username is too short.</p>
     <p ng-show="userForm.username.$error.maxlength && submitted" class="help-block">Username is too long.</p>
 </div>

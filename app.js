@@ -45,8 +45,8 @@
 
 
 //////////////////////////////////////////////////
-  FormController.$inject = ["$scope"];
-  function FormController($scope) {
+  FormController.$inject = ['$scope', '$http'];
+  function FormController($scope, $http) {
 
     // Store all form data in this object:
     $scope.formData = {};
@@ -56,10 +56,25 @@
       $scope.submitted = true;
       // check to make sure that the form is completely valid
       if(isValid){
-        alert('Awesome!');
+        $http({
+          method: 'POST',
+          url: 'process.php',
+          data: $.param($scope.formData),   // pass in data as strings
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+        })
+        .then(function success(data) {
+          console.log(data);
+          if(!data.success) {
+            // If not successful, bind errors to error variables
+            $scope.errorName = data.errors.name;
+            $scope.errorSuperhero = data.errors.superheroAlias;
+          } else {
+            // if successful, bind success message to message
+            $scope.message = data.message;
+          }
+        });
       }
     };
-
   }
 
 //////////////////////////////////////////////////
