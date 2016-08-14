@@ -77,7 +77,7 @@ body {
 }
 
 /* leave animation */
-#form-views.ng-leave { 
+#form-views.ng-leave {
   -webkit-animation:slideOutLeft 0.5s both ease;
   -moz-animation:slideOutLeft 0.5s both ease;
   animation:slideOutLeft 0.5s both ease;
@@ -109,3 +109,15 @@ body {
     from    { -webkit-transform:translateX(200%); }
     to      { -webkit-transform: translateX(0); }
 }
+
+/*Errors*/
+.ng-valid       { color: green;}
+.ng-invalid     {  }
+.ng-pristine    {  }
+.ng-dirty       {  }
+.ng-touched     {  }
+
+/* really specific css rules applied by angular */
+.ng-invalid-required        {  }
+.ng-invalid-minlength       {  }
+.ng-valid-max-length        {  }
