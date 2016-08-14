@@ -1,6 +1,8 @@
 
 body {
   padding-top:20px;
+  color: #FFF !important;
+  background-color: #222;
 }
 
 /* form styling */
@@ -16,6 +18,9 @@ body {
   border-top-left-radius:5px;
   border-top-right-radius:5px;
 }
+#form-views {
+  padding: 40px;
+}
 
 /* numbered buttons */
 #status-buttons                 {  }
@@ -26,15 +31,18 @@ body {
   margin-right:10px;
   text-align:center;
   text-transform:uppercase;
+  text-decoration: none;
 }
-#status-buttons a:hover         { text-decoration:none; }
+#status-buttons a:hover {
+  text-decoration:none;
+}
 
 /* we will style the span as the circled number */
 #status-buttons span {
   background:#080808;
-  display:block; height:30px;
-  margin:0
-  auto 10px;
+  display:block;
+  height:30px;
+  margin:0 auto 10px;
   padding-top:5px;
   width:30px;
   border-radius:50%;
