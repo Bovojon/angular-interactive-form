@@ -15,7 +15,8 @@
           </div>
 
           <!-- use ng-submit to catch the form submission and use our Angular function -->
-          <form id="signup-form" ng-submit="processForm()">
+          <!-- pass in the variable if our form is valid or invalid -->
+          <form id="signup-form" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
               <!-- our nested state views will be injected here -->
               <div id="form-views" ui-view></div>
           </form>

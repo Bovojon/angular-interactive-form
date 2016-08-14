@@ -52,8 +52,11 @@
     $scope.formData = {};
 
     // function to process the form
-    $scope.processForm = function() {
-      alert('Awesome!');
+    $scope.submitForm = function(isValid) {
+      // check to make sure that the form is completely valid
+      if(isValid){
+        alert('Awesome!');
+      }
     };
 
   }
