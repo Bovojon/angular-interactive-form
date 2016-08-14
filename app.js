@@ -53,6 +53,7 @@
 
     // function to process the form
     $scope.submitForm = function(isValid) {
+      $scope.submitted = true;
       // check to make sure that the form is completely valid
       if(isValid){
         alert('Awesome!');
