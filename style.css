@@ -111,7 +111,7 @@ body {
 }
 
 /*Errors*/
-.ng-valid       { color: green;}
+.ng-valid       {  }
 .ng-invalid     {  }
 .ng-pristine    {  }
 .ng-dirty       {  }
